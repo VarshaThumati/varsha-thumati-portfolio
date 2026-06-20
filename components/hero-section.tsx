@@ -7,7 +7,15 @@ export default function HeroSection() {
     { value: '9.13', label: 'CGPA' },
     { value: '15+', label: 'Certifications' },
     { value: 'National', label: 'Hackathon Participant' },
-    { value: 'AI-Powered', label: 'Web Developer' },
+    { value: 'Full-Stack', label: 'Developer' },
+  ]
+
+  const currentlyLearning = [
+    'Machine Learning',
+    'Deep Learning',
+    'AI Applications',
+    'Cloud Technologies',
+    'Full-Stack Development',
   ]
 
   return (
@@ -22,15 +30,30 @@ export default function HeroSection() {
             <p className="text-2xl font-semibold text-primary">
               Computer Science (Data Science) Student | AI Enthusiast | Software Developer
             </p>
-            <p className="max-w-2xl text-lg text-foreground/70">
-              Building AI-Powered Solutions for Real-World Problems
+            <p className="max-w-3xl text-lg leading-relaxed text-foreground/70">
+              Passionate about transforming ideas into intelligent solutions through Artificial Intelligence, Machine Learning, and Software Development.
             </p>
+          </div>
+
+          {/* Currently Learning */}
+          <div className="space-y-3">
+            <p className="text-sm font-semibold uppercase tracking-wide text-primary/70">Currently Exploring</p>
+            <div className="flex flex-wrap gap-2">
+              {currentlyLearning.map((topic, index) => (
+                <span
+                  key={index}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-foreground/80 transition-all hover:border-primary/60 hover:bg-primary/10"
+                >
+                  {topic}
+                </span>
+              ))}
+            </div>
           </div>
 
           {/* Stats grid */}
           <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
             {stats.map((stat, index) => (
-              <div key={index} className="border border-primary/20 rounded-lg p-4">
+              <div key={index} className="rounded-lg border border-primary/20 bg-primary/5 p-4 transition-all hover:border-primary/40 hover:bg-primary/10">
                 <div className="font-bold text-lg text-primary">{stat.value}</div>
                 <div className="text-sm text-foreground/60">{stat.label}</div>
               </div>

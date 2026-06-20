@@ -75,13 +75,16 @@ export default function CertificationsSection() {
         <div className="space-y-12">
           {/* Featured Certifications */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-foreground">Featured Certifications</h3>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <h3 className="mb-6 text-xl font-semibold text-primary">Featured Certifications</h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {certifications
                 .filter((cert) => cert.category === 'Featured')
                 .map((cert, index) => (
-                  <div key={index} className="rounded-lg border border-primary/20 p-4 hover:border-primary/40">
-                    <h4 className="mb-2 font-semibold text-foreground">{cert.name}</h4>
+                  <div key={index} className="group rounded-lg border border-primary/20 bg-primary/5 p-6 transition-all hover:border-primary/50 hover:bg-primary/10">
+                    <div className="mb-3 inline-block rounded-lg bg-primary/20 p-2 text-primary">
+                      <Award className="h-5 w-5" />
+                    </div>
+                    <h4 className="mb-2 font-semibold text-foreground group-hover:text-primary transition-colors">{cert.name}</h4>
                     <p className="text-sm text-foreground/60">{cert.issuer}</p>
                   </div>
                 ))}
@@ -90,13 +93,16 @@ export default function CertificationsSection() {
 
           {/* Google Cloud Certifications */}
           <div>
-            <h3 className="mb-6 text-xl font-semibold text-foreground">Google Cloud Certifications</h3>
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            <h3 className="mb-6 text-xl font-semibold text-secondary">Google Cloud Certifications</h3>
+            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {certifications
                 .filter((cert) => cert.category === 'Google Cloud')
                 .map((cert, index) => (
-                  <div key={index} className="rounded-lg border border-secondary/20 p-4 hover:border-secondary/40">
-                    <h4 className="mb-2 font-semibold text-foreground">{cert.name}</h4>
+                  <div key={index} className="group rounded-lg border border-secondary/20 bg-secondary/5 p-6 transition-all hover:border-secondary/50 hover:bg-secondary/10">
+                    <div className="mb-3 inline-block rounded-lg bg-secondary/20 p-2 text-secondary">
+                      <Award className="h-5 w-5" />
+                    </div>
+                    <h4 className="mb-2 font-semibold text-foreground group-hover:text-secondary transition-colors">{cert.name}</h4>
                     <p className="text-sm text-foreground/60">{cert.issuer}</p>
                   </div>
                 ))}
