@@ -4,9 +4,9 @@ export default function AboutSection() {
   return (
     <section id="about" className="scroll-mt-20 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <h2 className="mb-12 text-4xl font-bold text-foreground">About Me</h2>
+        <h2 className="mb-8 text-4xl font-bold text-foreground">About Me</h2>
 
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
           {/* Left: Profile Image */}
           <div className="flex items-center justify-center">
             <div className="relative">
@@ -22,8 +22,8 @@ export default function AboutSection() {
           </div>
 
           {/* Right: About Content */}
-          <div className="space-y-8">
-            <div className="space-y-4">
+          <div className="space-y-6">
+            <div className="space-y-3">
               <p className="text-lg leading-relaxed text-foreground/80">
                 I am Lakshmi Varsha Thumati, a Computer Science (Data Science) undergraduate at Gokaraju Rangaraju Institute of Engineering and Technology (GRIET) with a strong interest in Artificial Intelligence, Software Development, Cloud Computing, and Data Science.
               </p>

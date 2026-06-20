@@ -1,6 +1,6 @@
 'use client'
 
-import { Download } from 'lucide-react'
+import { FileText } from 'lucide-react'
 
 export default function HeroSection() {
   const stats = [
@@ -69,11 +69,13 @@ export default function HeroSection() {
               View Projects
             </a>
             <a
-              href="#"
+              href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Lakshmi-Varsha-Thumati---Resume-(3)-30ptt95Fy6vnubcRtFqDuJ3eVc8yht.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-6 py-3 font-semibold text-foreground transition-all hover:bg-primary/5"
             >
-              <Download className="h-4 w-4" />
-              Download Resume
+              <FileText className="h-4 w-4" />
+              View Resume
             </a>
             <a
               href="https://github.com/VarshaThumati"
