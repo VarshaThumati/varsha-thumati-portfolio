@@ -83,20 +83,31 @@ export default function ProjectsSection() {
                     </div>
 
                     {/* Project Links */}
-                    <div className="flex gap-4">
+                    <div className="flex flex-wrap gap-3">
                       <a
-                        href="#"
+                        href="https://github.com/VarshaThumati/plant-disease-prediction-severity-analysis-app"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-lg bg-primary/20 px-4 py-2 font-medium text-primary transition-all hover:bg-primary/30"
                       >
                         <Code className="h-4 w-4" />
                         View Code
                       </a>
                       <a
-                        href="#"
+                        href="https://github.com/VarshaThumati/plant-disease-prediction-severity-analysis-app/blob/main/README.md"
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-4 py-2 font-medium text-foreground transition-all hover:bg-primary/10"
                       >
                         <ExternalLink className="h-4 w-4" />
-                        Live Demo
+                        Documentation
+                      </a>
+                      <a
+                        href="#"
+                        className="inline-flex items-center gap-2 rounded-lg border border-secondary/30 px-4 py-2 font-medium text-foreground transition-all hover:bg-secondary/10"
+                      >
+                        <ExternalLink className="h-4 w-4" />
+                        Project Post
                       </a>
                     </div>
                   </div>

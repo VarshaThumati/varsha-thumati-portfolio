@@ -9,11 +9,11 @@ export default function Footer() {
             © {currentYear} Lakshmi Varsha Thumati. All rights reserved.
           </p>
           <p className="text-center text-sm text-foreground/60">
-            Designed and Developed with passion
+            Designed and Developed by Lakshmi Varsha Thumati
           </p>
           <div className="flex gap-4">
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/varsha-thumati/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 transition-colors hover:text-primary"
@@ -21,7 +21,7 @@ export default function Footer() {
               LinkedIn
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/VarshaThumati"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/60 transition-colors hover:text-primary"

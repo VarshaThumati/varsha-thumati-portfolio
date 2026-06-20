@@ -10,29 +10,54 @@ const achievements = [
     icon: Trophy,
   },
   {
-    title: 'AWS Academy Graduate',
-    subtitle: 'Cloud Foundations',
-    icon: Award,
-  },
-  {
-    title: 'AWS Academy Graduate',
-    subtitle: 'Data Engineering',
-    icon: Award,
-  },
-  {
-    title: 'Google AI-ML Virtual Internship',
-    subtitle: 'Completed',
-    icon: Award,
-  },
-  {
-    title: 'Cisco C Essentials Certification',
-    subtitle: 'Certified',
-    icon: Award,
-  },
-  {
-    title: 'Sports Achievements',
-    subtitle: 'Shotput Silver & Throwball Gold',
+    title: 'NHETIS\'25 Participation',
+    subtitle: 'National Hackathon',
     icon: Trophy,
+  },
+  {
+    title: 'Gen AI Workshop',
+    subtitle: 'AWS & IBM',
+    icon: Award,
+  },
+  {
+    title: 'ORBITEX',
+    subtitle: 'Event Participation',
+    icon: Trophy,
+  },
+  {
+    title: 'IdeaSprint',
+    subtitle: 'Innovation Competition',
+    icon: Trophy,
+  },
+  {
+    title: 'Shotput Silver Medal',
+    subtitle: 'District Level Competition',
+    icon: Trophy,
+  },
+  {
+    title: 'District-Level Throwball',
+    subtitle: 'Recognition',
+    icon: Trophy,
+  },
+  {
+    title: 'Intra Throwball Gold Medal',
+    subtitle: 'Competition Winner',
+    icon: Trophy,
+  },
+  {
+    title: 'Olympiad Achievements',
+    subtitle: 'Academic Excellence',
+    icon: Award,
+  },
+  {
+    title: 'Abacus Meritorious Certificate',
+    subtitle: 'Mathematical Excellence',
+    icon: Award,
+  },
+  {
+    title: 'Vedic Maths Certificate',
+    subtitle: 'Advanced Mathematics',
+    icon: Award,
   },
 ]
 
@@ -43,7 +68,7 @@ export default function AchievementsSection() {
     <section id="achievements" className="scroll-mt-20 bg-card/50 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <div ref={ref} className={`transition-all duration-1000 ${isInView ? 'animate-slide-up opacity-100' : 'opacity-0'}`}>
-          <h2 className="mb-4 text-4xl font-bold text-foreground sm:text-5xl">Achievements & Certifications</h2>
+          <h2 className="mb-4 text-4xl font-bold text-foreground sm:text-5xl">Achievements</h2>
           <p className="mb-12 text-lg text-foreground/60">
             Milestones and recognitions along my journey
           </p>

@@ -40,10 +40,16 @@ export default function AboutSection() {
           {/* About Description */}
           <div className="mb-16 rounded-xl glassmorphism p-8">
             <p className="mb-6 text-base text-foreground/70 leading-relaxed">
-              I&apos;m a Computer Science (Data Science) student at Gokaraju Rangaraju Institute of Engineering and Technology (GRIET), passionate about Artificial Intelligence, Machine Learning, Cloud Technologies, and Software Development. I enjoy building intelligent systems that create real-world impact.
+              I am Lakshmi Varsha Thumati, a Computer Science (Data Science) undergraduate at Gokaraju Rangaraju Institute of Engineering and Technology (GRIET) with a strong interest in Artificial Intelligence, Software Development, Cloud Computing, and Data Science.
+            </p>
+            <p className="mb-6 text-base text-foreground/70 leading-relaxed">
+              My journey began with learning programming through C, Java, and Python, which gradually led me to explore cloud technologies, machine learning, and intelligent systems. Through certifications from AWS, Google Cloud, Cisco, and NPTEL, I have built a solid technical foundation while continuously expanding my practical skills.
+            </p>
+            <p className="mb-6 text-base text-foreground/70 leading-relaxed">
+              Beyond academics, I actively engage in leadership and professional development as a Corporate Relations member of the Computer Society of India (CSI), where I collaborate with industry professionals, mentors, and organizations to create opportunities for students.
             </p>
             <p className="text-base text-foreground/70 leading-relaxed">
-              With a strong foundation in programming and cloud technologies, I&apos;m actively working toward becoming an AI Engineer. My focus is on developing practical AI solutions that solve complex problems and deliver measurable value.
+              I strongly believe in learning by building. My projects focus on solving real-world problems through technology, with a particular interest in AI-powered applications that create meaningful impact. I am currently exploring Machine Learning, Cloud Technologies, and Full-Stack Development while working toward becoming an AI Engineer capable of building intelligent solutions at scale.
             </p>
           </div>
 

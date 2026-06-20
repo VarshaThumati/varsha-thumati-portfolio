@@ -10,14 +10,29 @@ const responsibilities = [
     description: 'Building and maintaining strong relationships with leading tech companies and industry professionals',
   },
   {
-    icon: Zap,
+    icon: Briefcase,
     title: 'Sponsorship Outreach',
     description: 'Identifying and engaging potential sponsors for club events and initiatives',
   },
   {
     icon: Users,
+    title: 'Professional Relationship Management',
+    description: 'Fostering meaningful connections and strategic partnerships with key stakeholders',
+  },
+  {
+    icon: Users,
+    title: 'Alumni Engagement',
+    description: 'Connecting current students with alumni for mentorship and career opportunities',
+  },
+  {
+    icon: Zap,
     title: 'Event Coordination',
     description: 'Planning and executing workshops, seminars, and professional development events',
+  },
+  {
+    icon: Zap,
+    title: 'Partnership Development',
+    description: 'Creating and nurturing strategic collaborations that benefit the student community',
   },
 ]
 
@@ -36,11 +51,11 @@ export default function LeadershipSection() {
           {/* Leadership Card */}
           <div className="mb-12 overflow-hidden rounded-xl glassmorphism p-8">
             <div className="mb-8">
-              <h3 className="mb-2 text-2xl font-bold text-foreground">Corporate Relations Lead</h3>
-              <p className="text-foreground/60">Computer Science Institute (CSI) - GRIET</p>
+              <h3 className="mb-2 text-2xl font-bold text-foreground">Corporate Relations</h3>
+              <p className="text-foreground/60">Computer Society of India (CSI), GRIET</p>
             </div>
 
-            <div className="grid gap-8 md:grid-cols-3">
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
               {responsibilities.map((item, index) => {
                 const Icon = item.icon
                 return (

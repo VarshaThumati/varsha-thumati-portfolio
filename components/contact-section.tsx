@@ -16,13 +16,13 @@ export default function ContactSection() {
     {
       icon: Users,
       label: 'LinkedIn',
-      href: 'https://linkedin.com',
+      href: 'https://www.linkedin.com/in/varsha-thumati/',
       text: 'LinkedIn Profile',
     },
     {
       icon: GitBranch,
       label: 'GitHub',
-      href: 'https://github.com',
+      href: 'https://github.com/VarshaThumati',
       text: 'GitHub Profile',
     },
   ]
