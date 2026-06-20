@@ -49,12 +49,12 @@ export default function HeroSection() {
               <span className="relative z-10">View Projects</span>
             </a>
             <a
-              href="https://github.com"
+              href="https://github.com/VarshaThumati"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg border border-primary/30 px-8 py-3 font-semibold text-foreground transition-all hover:bg-primary/10 hover:border-primary"
             >
-              Download Resume
+              GitHub Profile
             </a>
             <a
               href="#contact"
