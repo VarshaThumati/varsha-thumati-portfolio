@@ -9,12 +9,15 @@ export default function AboutSection() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
           {/* Left: Profile Image */}
           <div className="flex items-center justify-center">
-            <div className="h-80 w-80 overflow-hidden rounded-lg border border-primary/20 bg-gradient-to-br from-primary/10 to-secondary/10">
-              <img
-                src="https://via.placeholder.com/400x400?text=Profile"
-                alt="Lakshmi Varsha Thumati"
-                className="h-full w-full object-cover"
-              />
+            <div className="relative">
+              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-primary/30 to-secondary/30 blur-lg" />
+              <div className="relative h-80 w-80 overflow-hidden rounded-full border-2 border-primary/40 shadow-lg shadow-primary/20">
+                <img
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/MyImage-BDNQX81f9Wdc5XHiBdNITIwmx4uEVq.jpeg"
+                  alt="Lakshmi Varsha Thumati"
+                  className="h-full w-full object-cover"
+                />
+              </div>
             </div>
           </div>
 

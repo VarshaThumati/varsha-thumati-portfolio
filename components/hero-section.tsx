@@ -4,7 +4,7 @@ import { Download } from 'lucide-react'
 
 export default function HeroSection() {
   const stats = [
-    { value: '9.13', label: 'CGPA' },
+    { value: '9.17', label: 'CGPA' },
     { value: '15+', label: 'Certifications' },
     { value: 'National', label: 'Hackathon Participant' },
     { value: 'Full-Stack', label: 'Developer' },
