@@ -1,73 +1,74 @@
 'use client'
 
-import { useEffect, useState } from 'react'
-import { ChevronDown } from 'lucide-react'
+import { Download } from 'lucide-react'
 
 export default function HeroSection() {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    setIsLoaded(true)
-  }, [])
+  const stats = [
+    { value: '9.13', label: 'CGPA' },
+    { value: '15+', label: 'Certifications' },
+    { value: 'National', label: 'Hackathon Participant' },
+    { value: 'AI-Powered', label: 'Web Developer' },
+  ]
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-20">
-      {/* Background gradient orbs */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -left-1/4 top-0 h-96 w-96 rounded-full bg-primary/20 blur-3xl" />
-        <div className="absolute -right-1/4 top-1/3 h-96 w-96 rounded-full bg-secondary/20 blur-3xl" />
-      </div>
-
-      <div className="relative z-10 mx-auto flex min-h-screen max-w-7xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
-        <div className={`text-center transition-all duration-1000 ${isLoaded ? 'animate-slide-up opacity-100' : 'opacity-0'}`}>
-          {/* Subtitle */}
-          <div className="mb-6 inline-block rounded-full bg-primary/10 px-4 py-2">
-            <span className="text-sm font-semibold text-primary">Welcome to My Portfolio</span>
+    <section className="relative px-4 py-20 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-7xl">
+        <div className="space-y-12">
+          {/* Main headline */}
+          <div className="space-y-4">
+            <h1 className="text-5xl font-bold tracking-tight text-foreground sm:text-6xl md:text-7xl">
+              Lakshmi Varsha Thumati
+            </h1>
+            <p className="text-2xl font-semibold text-primary">
+              Computer Science (Data Science) Student | AI Enthusiast | Software Developer
+            </p>
+            <p className="max-w-2xl text-lg text-foreground/70">
+              Building AI-Powered Solutions for Real-World Problems
+            </p>
           </div>
 
-          {/* Main Title */}
-          <h1 className="mb-6 text-5xl font-bold leading-tight text-foreground sm:text-7xl">
-            Lakshmi Varsha <span className="gradient-text">Thumati</span>
-          </h1>
+          {/* Stats grid */}
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {stats.map((stat, index) => (
+              <div key={index} className="border border-primary/20 rounded-lg p-4">
+                <div className="font-bold text-lg text-primary">{stat.value}</div>
+                <div className="text-sm text-foreground/60">{stat.label}</div>
+              </div>
+            ))}
+          </div>
 
-          {/* Subtitle text */}
-          <p className="mb-6 text-xl font-medium text-foreground/80 sm:text-2xl">
-            AI Engineer in Progress | Software Developer | Data Science Student
-          </p>
-
-          {/* Description */}
-          <p className="mb-12 max-w-2xl text-base text-foreground/60 sm:text-lg">
-            Building AI-Powered Solutions for Real-World Problems
-          </p>
-
-          {/* CTA Buttons */}
-          <div className="flex flex-col gap-4 sm:flex-row sm:justify-center">
+          {/* Action buttons */}
+          <div className="flex flex-wrap gap-4">
             <a
               href="#projects"
-              className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-primary px-8 py-3 font-semibold text-primary-foreground transition-all hover:shadow-lg hover:shadow-primary/50"
+              className="inline-flex items-center justify-center rounded-lg bg-primary px-6 py-3 font-semibold text-primary-foreground transition-all hover:bg-primary/90"
             >
-              <span className="relative z-10">View Projects</span>
+              View Projects
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-6 py-3 font-semibold text-foreground transition-all hover:bg-primary/5"
+            >
+              <Download className="h-4 w-4" />
+              Download Resume
             </a>
             <a
               href="https://github.com/VarshaThumati"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center rounded-lg border border-primary/30 px-8 py-3 font-semibold text-foreground transition-all hover:bg-primary/10 hover:border-primary"
+              className="inline-flex items-center justify-center rounded-lg border border-primary/30 px-6 py-3 font-semibold text-foreground transition-all hover:bg-primary/5"
             >
-              GitHub Profile
+              GitHub
             </a>
             <a
-              href="#contact"
-              className="inline-flex items-center justify-center rounded-lg border border-primary/30 px-8 py-3 font-semibold text-foreground transition-all hover:bg-primary/10 hover:border-primary"
+              href="https://www.linkedin.com/in/varsha-thumati/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg border border-primary/30 px-6 py-3 font-semibold text-foreground transition-all hover:bg-primary/5"
             >
-              Contact Me
+              LinkedIn
             </a>
           </div>
-        </div>
-
-        {/* Scroll indicator */}
-        <div className={`absolute bottom-8 left-1/2 -translate-x-1/2 transition-all duration-1000 ${isLoaded ? 'animate-float opacity-100' : 'opacity-0'}`}>
-          <ChevronDown className="h-6 w-6 text-primary/50" />
         </div>
       </div>
     </section>

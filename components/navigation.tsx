@@ -10,7 +10,8 @@ export default function Navigation() {
     { label: 'About', href: '#about' },
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
-    { label: 'Achievements', href: '#achievements' },
+    { label: 'Leadership', href: '#leadership' },
+    { label: 'Certifications', href: '#certifications' },
     { label: 'Contact', href: '#contact' },
   ]
 

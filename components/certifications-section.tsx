@@ -67,64 +67,39 @@ const certifications = [
 ]
 
 export default function CertificationsSection() {
-  const [ref, isInView] = useInView()
-
   return (
-    <section id="certifications" className="scroll-mt-20 bg-card/50 px-4 py-20 sm:px-6 lg:px-8">
+    <section id="certifications" className="scroll-mt-20 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div ref={ref} className={`transition-all duration-1000 ${isInView ? 'animate-slide-up opacity-100' : 'opacity-0'}`}>
-          <h2 className="mb-4 text-4xl font-bold text-foreground sm:text-5xl">Certifications</h2>
-          <p className="mb-12 text-lg text-foreground/60">
-            Professional credentials and qualifications
-          </p>
+        <h2 className="mb-12 text-4xl font-bold text-foreground">Certifications</h2>
 
-          <div className="space-y-12">
-            {/* Featured Certifications */}
-            <div>
-              <h3 className="mb-6 text-2xl font-bold text-primary">Featured Certifications</h3>
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {certifications
-                  .filter((cert) => cert.category === 'Featured')
-                  .map((cert, index) => (
-                    <div
-                      key={index}
-                      className="group rounded-xl glassmorphism p-6 transition-all duration-300 hover:border-primary/50 hover:bg-primary/5"
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                      }}
-                    >
-                      <div className="mb-4 inline-flex rounded-lg bg-primary/20 p-3 text-primary transition-transform group-hover:scale-110">
-                        <Award className="h-6 w-6" />
-                      </div>
-                      <h4 className="mb-2 font-semibold text-foreground">{cert.name}</h4>
-                      <p className="text-sm text-foreground/60">{cert.issuer}</p>
-                    </div>
-                  ))}
-              </div>
+        <div className="space-y-12">
+          {/* Featured Certifications */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold text-foreground">Featured Certifications</h3>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {certifications
+                .filter((cert) => cert.category === 'Featured')
+                .map((cert, index) => (
+                  <div key={index} className="rounded-lg border border-primary/20 p-4 hover:border-primary/40">
+                    <h4 className="mb-2 font-semibold text-foreground">{cert.name}</h4>
+                    <p className="text-sm text-foreground/60">{cert.issuer}</p>
+                  </div>
+                ))}
             </div>
+          </div>
 
-            {/* Google Cloud Certifications */}
-            <div>
-              <h3 className="mb-6 text-2xl font-bold text-secondary">Google Cloud Certifications</h3>
-              <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-                {certifications
-                  .filter((cert) => cert.category === 'Google Cloud')
-                  .map((cert, index) => (
-                    <div
-                      key={index}
-                      className="group rounded-xl glassmorphism p-6 transition-all duration-300 hover:border-secondary/50 hover:bg-secondary/5"
-                      style={{
-                        animationDelay: `${index * 100}ms`,
-                      }}
-                    >
-                      <div className="mb-4 inline-flex rounded-lg bg-secondary/20 p-3 text-secondary transition-transform group-hover:scale-110">
-                        <Award className="h-6 w-6" />
-                      </div>
-                      <h4 className="mb-2 font-semibold text-foreground">{cert.name}</h4>
-                      <p className="text-sm text-foreground/60">{cert.issuer}</p>
-                    </div>
-                  ))}
-              </div>
+          {/* Google Cloud Certifications */}
+          <div>
+            <h3 className="mb-6 text-xl font-semibold text-foreground">Google Cloud Certifications</h3>
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {certifications
+                .filter((cert) => cert.category === 'Google Cloud')
+                .map((cert, index) => (
+                  <div key={index} className="rounded-lg border border-secondary/20 p-4 hover:border-secondary/40">
+                    <h4 className="mb-2 font-semibold text-foreground">{cert.name}</h4>
+                    <p className="text-sm text-foreground/60">{cert.issuer}</p>
+                  </div>
+                ))}
             </div>
           </div>
         </div>

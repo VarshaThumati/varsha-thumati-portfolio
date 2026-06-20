@@ -3,117 +3,103 @@
 import { useInView } from '@/hooks/use-in-view'
 import { ExternalLink, Code } from 'lucide-react'
 
-const projects = [
-  {
-    title: 'AI-Powered Plant Disease Detection System',
-    description: 'Developed a web-based AI platform that analyzes plant leaf images using Convolutional Neural Networks (CNNs). The system predicts diseases, confidence scores, severity percentages, and future disease progression risk levels.',
-    technologies: ['React', 'FastAPI', 'TensorFlow', 'Python', 'CNN'],
-    features: [
-      'Image Upload & Processing',
-      'Disease Detection',
-      'Confidence Scoring',
-      'Severity Analysis',
-      'Risk Prediction',
-      'Mobile & Desktop Support',
-    ],
-    image: 'linear-gradient(135deg, #0066cc 0%, #00d9ff 100%)',
-  },
-]
+const project = {
+  title: 'AI-Powered Plant Disease Detection & Severity Analysis System',
+  problem: 'Farmers often face difficulties identifying plant diseases at an early stage, leading to crop loss and reduced yield.',
+  solution: 'Developed a web-based AI system that detects plant diseases using CNN-based image analysis and provides severity assessment and risk prediction.',
+  features: [
+    'Disease Detection',
+    'Confidence Score Prediction',
+    'Severity Analysis',
+    'Future Disease Risk Prediction',
+    'Mobile Accessibility',
+    'Desktop Accessibility',
+  ],
+  technologies: ['Python', 'TensorFlow', 'CNN', 'FastAPI', 'React'],
+}
 
 export default function ProjectsSection() {
-  const [ref, isInView] = useInView()
-
   return (
     <section id="projects" className="scroll-mt-20 px-4 py-20 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div ref={ref} className={`transition-all duration-1000 ${isInView ? 'animate-slide-up opacity-100' : 'opacity-0'}`}>
-          <h2 className="mb-4 text-4xl font-bold text-foreground sm:text-5xl">Featured Projects</h2>
-          <p className="mb-12 text-lg text-foreground/60">
-            Showcasing my most impactful work
-          </p>
+        <h2 className="mb-4 text-4xl font-bold text-foreground">Featured Project</h2>
+        <p className="mb-12 text-lg text-foreground/60">
+          My most impactful work
+        </p>
 
-          <div className="space-y-8">
-            {projects.map((project, index) => (
-              <div
-                key={index}
-                className="overflow-hidden rounded-xl glassmorphism transition-all duration-300 hover:border-primary/50 hover:bg-primary/5"
-              >
-                <div className="grid gap-8 p-8 lg:grid-cols-2">
-                  {/* Project Image */}
-                  <div className="flex items-center justify-center">
-                    <div
-                      className="h-64 w-full rounded-lg shadow-lg shadow-primary/20"
-                      style={{ background: project.image }}
-                    />
-                  </div>
+        {/* Main Project Card */}
+        <div className="space-y-8 rounded-xl border border-primary/20 p-8">
+          <div>
+            <h3 className="mb-6 text-3xl font-bold text-foreground">{project.title}</h3>
+          </div>
 
-                  {/* Project Content */}
-                  <div className="flex flex-col justify-between">
-                    <div>
-                      <h3 className="mb-4 text-2xl font-bold text-foreground">{project.title}</h3>
-                      <p className="mb-6 text-foreground/70 leading-relaxed">{project.description}</p>
+          {/* Problem & Solution */}
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <h4 className="mb-3 text-lg font-semibold text-primary">Problem</h4>
+              <p className="text-foreground/70 leading-relaxed">{project.problem}</p>
+            </div>
+            <div>
+              <h4 className="mb-3 text-lg font-semibold text-primary">Solution</h4>
+              <p className="text-foreground/70 leading-relaxed">{project.solution}</p>
+            </div>
+          </div>
 
-                      {/* Features */}
-                      <div className="mb-6">
-                        <h4 className="mb-3 font-semibold text-primary">Key Features:</h4>
-                        <ul className="grid gap-2 sm:grid-cols-2">
-                          {project.features.map((feature, featureIndex) => (
-                            <li key={featureIndex} className="flex items-center gap-2 text-sm text-foreground/60">
-                              <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                              {feature}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
+          {/* Features */}
+          <div>
+            <h4 className="mb-4 text-lg font-semibold text-primary">Features</h4>
+            <ul className="grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+              {project.features.map((feature, index) => (
+                <li key={index} className="flex items-center gap-3">
+                  <span className="h-2 w-2 rounded-full bg-primary" />
+                  <span className="text-foreground/70">{feature}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-                      {/* Technologies */}
-                      <div className="mb-6">
-                        <h4 className="mb-3 font-semibold text-primary">Technologies:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech, techIndex) => (
-                            <span
-                              key={techIndex}
-                              className="rounded-full bg-secondary/20 px-3 py-1 text-xs font-medium text-secondary"
-                            >
-                              {tech}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    </div>
+          {/* Tech Stack */}
+          <div>
+            <h4 className="mb-4 text-lg font-semibold text-primary">Tech Stack</h4>
+            <div className="flex flex-wrap gap-2">
+              {project.technologies.map((tech, index) => (
+                <span
+                  key={index}
+                  className="rounded-full border border-primary/30 bg-primary/5 px-4 py-2 text-sm font-medium text-foreground/80"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
 
-                    {/* Project Links */}
-                    <div className="flex flex-wrap gap-3">
-                      <a
-                        href="https://github.com/VarshaThumati/plant-disease-prediction-severity-analysis-app"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg bg-primary/20 px-4 py-2 font-medium text-primary transition-all hover:bg-primary/30"
-                      >
-                        <Code className="h-4 w-4" />
-                        View Code
-                      </a>
-                      <a
-                        href="https://github.com/VarshaThumati/plant-disease-prediction-severity-analysis-app/blob/main/README.md"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-4 py-2 font-medium text-foreground transition-all hover:bg-primary/10"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Documentation
-                      </a>
-                      <a
-                        href="#"
-                        className="inline-flex items-center gap-2 rounded-lg border border-secondary/30 px-4 py-2 font-medium text-foreground transition-all hover:bg-secondary/10"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Project Post
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Buttons */}
+          <div className="flex flex-wrap gap-3 pt-4">
+            <a
+              href="https://github.com/VarshaThumati/plant-disease-prediction-severity-analysis-app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-2 font-semibold text-primary-foreground transition-all hover:bg-primary/90"
+            >
+              <Code className="h-4 w-4" />
+              View Code
+            </a>
+            <a
+              href="https://github.com/VarshaThumati/plant-disease-prediction-severity-analysis-app/blob/main/README.md"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-6 py-2 font-semibold text-foreground transition-all hover:bg-primary/5"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Documentation
+            </a>
+            <a
+              href="#"
+              className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-6 py-2 font-semibold text-foreground transition-all hover:bg-primary/5"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Project Post
+            </a>
           </div>
         </div>
       </div>
