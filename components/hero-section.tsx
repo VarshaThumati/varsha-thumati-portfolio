@@ -1,6 +1,16 @@
 'use client'
 
-import { Download } from 'lucide-react'
+import { FileText } from 'lucide-react'
+
+const handleDownloadResume = () => {
+  const link = document.createElement('a')
+  link.href = 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Lakshmi-Varsha-Thumati---Resume-(3)-30ptt95Fy6vnubcRtFqDuJ3eVc8yht.pdf'
+  link.download = 'Lakshmi-Varsha-Thumati-Resume.pdf'
+  link.setAttribute('target', '_blank')
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
 
 export default function HeroSection() {
   const stats = [
@@ -68,13 +78,13 @@ export default function HeroSection() {
             >
               View Projects
             </a>
-            <a
-              href="#"
+            <button
+              onClick={handleDownloadResume}
               className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-6 py-3 font-semibold text-foreground transition-all hover:bg-primary/5"
             >
-              <Download className="h-4 w-4" />
+              <FileText className="h-4 w-4" />
               Download Resume
-            </a>
+            </button>
             <a
               href="https://github.com/VarshaThumati"
               target="_blank"
