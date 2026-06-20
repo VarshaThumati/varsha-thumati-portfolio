@@ -22,7 +22,7 @@ const featuredProject = {
   },
 }
 
-const otherProjects = [
+const additionalProjects = [
   {
     title: 'Smart Parking Management System',
     description: 'Database-driven parking management system with efficient vehicle tracking and parking slot allocation. Automated entry/exit management and real-time availability updates.',
@@ -34,7 +34,10 @@ const otherProjects = [
     ],
     technologies: ['Python', 'DBMS'],
     icon: Database,
-    github: 'https://github.com/VarshaThumati/Smart-Parking-Management-System',
+    links: {
+      code: 'https://github.com/VarshaThumati/Smart-Parking-Management-System',
+      documentation: 'https://github.com/VarshaThumati/Smart-Parking-Management-System/blob/main/README.md',
+    },
   },
   {
     title: 'Python Quiz Project',
@@ -47,7 +50,10 @@ const otherProjects = [
     ],
     technologies: ['Python'],
     icon: Brain,
-    github: 'https://github.com/VarshaThumati/Python_Quiz_Project',
+    links: {
+      code: 'https://github.com/VarshaThumati/Python_Quiz_Project',
+      documentation: 'https://github.com/VarshaThumati/Python_Quiz_Project/blob/main/README.md',
+    },
   },
   {
     title: 'Smart Page Replacement Visualizer',
@@ -60,7 +66,10 @@ const otherProjects = [
     ],
     technologies: ['HTML', 'CSS', 'JavaScript', 'Chart.js'],
     icon: Terminal,
-    github: 'https://github.com/VarshaThumati/Smart-Page-Replacement-Visualizer',
+    links: {
+      code: 'https://github.com/VarshaThumati/Smart-Page-Replacement-Visualizer',
+      documentation: 'https://github.com/VarshaThumati/Smart-Page-Replacement-Visualizer/blob/main/README.md',
+    },
   },
 ]
 
@@ -153,90 +162,78 @@ export default function ProjectsSection() {
               <ExternalLink className="h-4 w-4" />
               Live Demo
             </a>
-            <a
-              href={featuredProject.links.code}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-lg border border-primary/30 px-6 py-2 font-semibold text-foreground transition-all hover:bg-primary/5"
-            >
-              <Code className="h-4 w-4" />
-              GitHub Repository
-            </a>
           </div>
         </div>
 
-        {/* Other Projects Grid */}
-        <div>
-          <h3 className="mb-8 text-2xl font-bold text-foreground">Other Projects</h3>
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {otherProjects.map((project, index) => {
-              const IconComponent = project.icon
-              return (
-                <div
-                  key={index}
-                  className="group relative overflow-hidden rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
-                >
-                  {/* Glow effect on hover */}
-                  <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/20 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
+        {/* Additional Projects Grid */}
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {additionalProjects.map((project, index) => {
+            const IconComponent = project.icon
+            return (
+              <div
+                key={index}
+                className="group relative overflow-hidden rounded-xl border border-primary/20 bg-gradient-to-br from-primary/5 to-transparent p-6 transition-all duration-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/10"
+              >
+                {/* Glow effect on hover */}
+                <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/20 opacity-0 blur-2xl transition-opacity duration-300 group-hover:opacity-100" />
 
-                  <div className="relative space-y-4">
-                    {/* Icon */}
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary transition-all group-hover:bg-primary/30">
-                      <IconComponent className="h-6 w-6" />
-                    </div>
+                <div className="relative flex flex-col h-full space-y-4">
+                  {/* Icon */}
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/20 text-primary transition-all group-hover:bg-primary/30">
+                    <IconComponent className="h-6 w-6" />
+                  </div>
 
-                    {/* Title */}
-                    <h4 className="text-xl font-bold text-foreground">{project.title}</h4>
+                  {/* Title */}
+                  <h4 className="text-xl font-bold text-foreground">{project.title}</h4>
 
-                    {/* Description */}
-                    <p className="text-sm leading-relaxed text-foreground/70">{project.description}</p>
+                  {/* Description */}
+                  <p className="text-sm leading-relaxed text-foreground/70">{project.description}</p>
 
-                    {/* Highlights */}
-                    <div className="space-y-2">
-                      {project.highlights.map((highlight, hIndex) => (
-                        <div key={hIndex} className="flex items-center gap-2 text-xs text-foreground/60">
-                          <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                          {highlight}
-                        </div>
-                      ))}
-                    </div>
+                  {/* Highlights */}
+                  <div className="space-y-2">
+                    {project.highlights.map((highlight, hIndex) => (
+                      <div key={hIndex} className="flex items-center gap-2 text-xs text-foreground/60">
+                        <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                        {highlight}
+                      </div>
+                    ))}
+                  </div>
 
-                    {/* Tech Stack */}
-                    <div className="flex flex-wrap gap-1">
-                      {project.technologies.map((tech, tIndex) => (
-                        <span
-                          key={tIndex}
-                          className="rounded-full border border-primary/30 bg-primary/10 px-2 py-1 text-xs font-medium text-foreground/70"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-
-                    {/* Buttons */}
-                    <div className="flex gap-2 pt-2">
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 rounded-lg border border-primary/30 px-3 py-2 text-center text-xs font-semibold text-foreground transition-all hover:bg-primary/5"
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies.map((tech, tIndex) => (
+                      <span
+                        key={tIndex}
+                        className="rounded-full border border-primary/30 bg-primary/10 px-2 py-1 text-xs font-medium text-foreground/70"
                       >
-                        View Code
-                      </a>
-                      <a
-                        href={project.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex-1 rounded-lg border border-primary/30 px-3 py-2 text-center text-xs font-semibold text-foreground transition-all hover:bg-primary/5"
-                      >
-                        GitHub
-                      </a>
-                    </div>
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Buttons */}
+                  <div className="flex gap-2 pt-2 mt-auto">
+                    <a
+                      href={project.links.code}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 rounded-lg border border-primary/30 px-3 py-2 text-center text-xs font-semibold text-foreground transition-all hover:bg-primary/5"
+                    >
+                      View Code
+                    </a>
+                    <a
+                      href={project.links.documentation}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 rounded-lg border border-primary/30 px-3 py-2 text-center text-xs font-semibold text-foreground transition-all hover:bg-primary/5"
+                    >
+                      Documentation
+                    </a>
                   </div>
                 </div>
-              )
-            })}
-          </div>
+              </div>
+            )
+          })}
         </div>
       </div>
     </section>
